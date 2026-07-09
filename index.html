@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* Cores Base do Criativo e Logomarca */
+        /* Cores Base da Logomarca e do Criativo */
         :root {
             --brera-green: #1B2C1A; /* Verde profundo da logo */
             --bg-cream: #FDFBF4;     /* Creme sofisticado do criativo */
@@ -35,7 +35,7 @@
 
         /* Container Principal */
         .container {
-            max-width: 800px;
+            max-width: 850px;
             width: 100%;
             padding: 40px 20px;
             text-align: center;
@@ -99,12 +99,12 @@
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-size: 1.2rem;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 40px auto;
             color: #556253;
         }
 
-        /* Pilares do Workshop */
+        /* Seção da Experiência (Pares de Foto + Texto) */
         .experience-section {
             background-color: #ffffff;
             padding: 40px;
@@ -116,8 +116,11 @@
         }
 
         .pillar {
-            margin-bottom: 30px;
-            padding-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 35px;
+            padding-bottom: 35px;
             border-bottom: 1px solid #F4F1E8;
         }
 
@@ -125,6 +128,20 @@
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
+        }
+
+        /* Configuração das Imagens Quadradas */
+        .pillar-img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+            border: 1px solid #ECE9DF;
+        }
+
+        .pillar-content {
+            flex-grow: 1;
         }
 
         .pillar h3 {
@@ -147,24 +164,27 @@
             letter-spacing: 1px;
             color: var(--gold-accent);
             font-weight: 600;
-            margin-top: 5px;
+            margin-top: 8px;
         }
 
-        /* Seção de Aplicação / Escassez */
+        /* Seção de Ações / CTAs */
         .cta-box {
             margin-top: 40px;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .exclusivity-text {
             font-size: 0.85rem;
             color: #6B776A;
             max-width: 550px;
-            margin: 0 auto 30px auto;
+            margin-bottom: 35px;
             font-weight: 400;
         }
 
-        /* Botão de Alto Padrão */
+        /* Botão Principal */
         .btn-apply {
             display: inline-block;
             background-color: var(--brera-green);
@@ -178,11 +198,29 @@
             border-radius: 0;
             transition: all 0.3s ease;
             border: 1px solid var(--brera-green);
+            margin-bottom: 10px;
         }
 
         .btn-apply:hover {
             background-color: transparent;
             color: var(--brera-green);
+            cursor: pointer;
+        }
+
+        /* Frase de Link Secundária (Petit Comité) */
+        .link-member {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: var(--brera-green);
+            text-decoration: underline;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .link-member:hover {
+            color: var(--gold-accent);
             cursor: pointer;
         }
 
@@ -195,13 +233,22 @@
             text-transform: uppercase;
         }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
+        /* Responsividade para Celulares */
+        @media (max-width: 650px) {
             header { padding: 20px; }
             .logo-text { font-size: 2rem; }
             .logo-subtext { font-size: 1.2rem; margin-left: 45px; }
             h1 { font-size: 2.2rem; }
             .experience-section { padding: 25px; }
+            .pillar {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .pillar-img {
+                width: 160px;
+                height: 160px;
+            }
         }
     </style>
 </head>
@@ -217,25 +264,34 @@
         <section class="hero">
             <span class="date-badge">16 de Julho às 19h30</span>
             <h1>Etiqueta Sutil e Postura Social</h1>
-            <p class="subtitle">Um jantar intimista e workshop prático desenhado para quem compreende a elegância não-verbal como uma ferramenta de posicionamento e poder.</p>
+            <p class="subtitle">Um jantar intimista e workshop prático desenhado para quem compreende a elegância não-verbal como uma ferramenta indispensável de posicionamento.</p>
         </section>
 
         <section class="experience-section">
             
             <div class="pillar">
-                <h3>Comportamento à Mesa & Mesa Posta</h3>
-                <p>Aprenda os códigos visuais e comportamentais que comunicam sofisticação instantânea, além de como estruturar uma mesa posta para cada tipo de ocasião.</p>
-                <p class="partnership">Parceria Especial: Orchidée Maison</p>
+                <img src="mesa.jpg" alt="Mesa Posta" class="pillar-img">
+                <div class="pillar-content">
+                    <h3>Comportamento à Mesa & Mesa Posta</h3>
+                    <p>Aprenda os códigos visuais e comportamentais que comunicam sofisticação instantânea, além de como estruturar uma mesa posta impecável para cada tipo de ocasião.</p>
+                    <p class="partnership">Parceria Especial: Orchidée Maison</p>
+                </div>
             </div>
 
             <div class="pillar">
-                <h3>Elegância Não-Verbal</h3>
-                <p>A história da etiqueta traduzida para a postura contemporânea. O sentido de presença marcante através do movimento, expressão e refino.</p>
+                <img src="postura.jpg" alt="Postura Social" class="pillar-img">
+                <div class="pillar-content">
+                    <h3>Elegância Não-Verbal</h3>
+                    <p>A história da etiqueta traduzida para a postura contemporânea. O sentido de presença marcante e memorável através do movimento, expressão e refino.</p>
+                </div>
             </div>
 
             <div class="pillar">
-                <h3>Jantar Harmonizado em 3 Tempos</h3>
-                <p>Uma experiência gastronômica conduzida por Chef renomado, incluindo entrada, prato principal e sobremesa. Acompanha vinhos selecionados e bebidas finas.</p>
+                <img src="jantar.jpg" alt="Jantar Harmonizado" class="pillar-img">
+                <div class="pillar-content">
+                    <h3>Jantar Harmonizado em 3 Tempos</h3>
+                    <p>Uma experiência gastronômica premium conduzida por Chef renomado, incluindo entrada, prato principal e sobremesa. Acompanha vinhos selecionados, águas finas e água de coco.</p>
+                </div>
             </div>
 
         </section>
@@ -243,10 +299,12 @@
         <section class="cta-box">
             <p class="exclusivity-text">
                 Evento de inauguração exclusivo para membros do Petit Comité.<br>
-                Para convidados externos, as vagas são limitadas, sujeitas à aprovação de perfil e possuem uma taxa de inscrição de R$ 450.
+                Para convidados externos, as vagas são limitadas, sujeitas à aprovação de perfil.
             </p>
             
-            <a href="https://forms.gle/eSoEdiKyGkBMhcRJ6" class="btn-apply">Quero me aplicar para o evento</a>
+            <a href="https://forms.gle/eSoEdiKyGkBMhcRJ6" class="btn-apply">Quero me Aplicar para o Evento</a>
+            
+            <a href="https://forms.gle/eSoEdiKyGkBMhcRJ6" class="link-member">Quero ser membro Petit Comité</a>
         </section>
 
         <footer>
