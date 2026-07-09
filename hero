@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta Sutil e Postura Social | Brera Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Cores Base do Criativo e Logomarca */
+        :root {
+            --brera-green: #1B2C1A; /* Verde profundo da logo */
+            --bg-cream: #FDFBF4;     /* Creme sofisticado do criativo */
+            --text-dark: #2A3629;    /* Grafite esverdeado para leitura */
+            --gold-accent: #C5A880; /* Dourado sutil para detalhes */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Header / Logo */
+        header {
+            margin-bottom: 60px;
+            background-color: var(--brera-green);
+            padding: 30px;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .logo-text {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.5rem;
+            color: #ffffff;
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .logo-subtext {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-style: italic;
+            margin-top: -5px;
+            margin-left: 60px;
+        }
+
+        /* Seção Hero */
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .date-badge {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--brera-green);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--brera-green);
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            color: #556253;
+        }
+
+        /* Pilares do Workshop */
+        .experience-section {
+            background-color: #ffffff;
+            padding: 40px;
+            border: 1px solid #ECE9DF;
+            border-radius: 4px;
+            text-align: left;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
+        .pillar {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #F4F1E8;
+        }
+
+        .pillar:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .pillar h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--brera-green);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .pillar p {
+            font-size: 0.95rem;
+            color: #4A5549;
+            font-weight: 300;
+        }
+
+        .partnership {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-accent);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Seção de Aplicação / Escassez */
+        .cta-box {
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .exclusivity-text {
+            font-size: 0.85rem;
+            color: #6B776A;
+            max-width: 550px;
+            margin: 0 auto 30px auto;
+            font-weight: 400;
+        }
+
+        /* Botão de Alto Padrão */
+        .btn-apply {
+            display: inline-block;
+            background-color: var(--brera-green);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 45px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            border: 1px solid var(--brera-green);
+        }
+
+        .btn-apply:hover {
+            background-color: transparent;
+            color: var(--brera-green);
+            cursor: pointer;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 80px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: #9AA699;
+            text-transform: uppercase;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { padding: 20px; }
+            .logo-text { font-size: 2rem; }
+            .logo-subtext { font-size: 1.2rem; margin-left: 45px; }
+            h1 { font-size: 2.2rem; }
+            .experience-section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">Brera</div>
+        <div class="logo-subtext">Group</div>
+    </header>
+
+    <div class="container">
+        
+        <section class="hero">
+            <span class="date-badge">16 de Julho às 19h30</span>
+            <h1>Etiqueta Sutil e Postura Social</h1>
+            <p class="subtitle">Um jantar intimista e workshop prático desenhado para quem compreende a elegância não-verbal como uma ferramenta de posicionamento e poder.</p>
+        </section>
+
+        <section class="experience-section">
+            
+            <div class="pillar">
+                <h3>Comportamento à Mesa & Mesa Posta</h3>
+                <p>Aprenda os códigos visuais e comportamentais que comunicam sofisticação instantânea, além de como estruturar uma mesa posta para cada tipo de ocasião.</p>
+                <p class="partnership">Parceria Especial: Orchidée Maison</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Elegância Não-Verbal</h3>
+                <p>A história da etiqueta traduzida para a postura contemporânea. O sentido de presença marcante através do movimento, expressão e refino.</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Jantar Harmonizado em 3 Tempos</h3>
+                <p>Uma experiência gastronômica conduzida por Chef renomado, incluindo entrada, prato principal e sobremesa. Acompanha vinhos selecionados e bebidas finas.</p>
+            </div>
+
+        </section>
+
+        <section class="cta-box">
+            <p class="exclusivity-text">
+                Evento de inauguração exclusivo para membros do Petit Comité.<br>
+                Para convidados externos, as vagas são limitadas, sujeitas à aprovação de perfil e possuem uma taxa de inscrição de R$ 450.
+            </p>
+            
+            <a href="https://forms.gle/eSoEdiKyGkBMhcRJ6" class="btn-apply">Quero me aplicar para o evento</a>
+        </section>
+
+        <footer>
+            &copy; 2026 Brera Group. Todos os direitos reservados.
+        </footer>
+
+    </div>
+
+</body>
+</html>
